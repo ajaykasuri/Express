@@ -1,0 +1,141 @@
+#mainWrapper{
+    width: 100%;
+    margin-bottom: 30px;
+}
+ 
+.innerWrapper{
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    /* box-shadow: 2px 2px 2px #cdcdcd; */
+    border: 1px solid #cdcdcd;
+ 
+}
+.innerWrapper h3{
+    text-align: center;
+    color: #1c3681;
+    padding: 10px 10px 10px 0;
+    font-weight: bold;
+}
+ 
+.innerWrapper p{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 30px;
+    /* color: #1c3681; */
+}
+.serviceContainer {
+ 
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 30px;
+ 
+}
+.firstRow{
+    width: 100%;
+    height:auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content:space-evenly;
+   
+}
+.eachService {
+    width: 22%;
+    height:200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    /* border: 1px solid red; */
+    padding: 9px;
+    position: relative;
+    background-color: rgb(255, 253, 252);
+    /* border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px; */
+      /* box-shadow: 2px 2px 1px #cdcdcd; */
+      /* background-color: rgb(255, 253, 252);
+      border: 0.5px solid #1c3681;
+      background-color: #1c3581;
+      clip-path: polygon(
+        20% 0%, 100% 0%, 100% 85%,
+        85% 100%, 0% 100%, 0% 15%
+     
+      ); */
+}
+.eachService::before{
+    content: '';
+    width: 284px;
+    height: 218px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    position: absolute;
+    left: -1%;
+    top: -1%;
+    z-index: -100;
+    border-radius: 23px;
+ 
+    background-color: #1c3681;
+   
+}
+.eachService::after{
+    content: '';
+    width: 284px;
+    height: 218px;
+    border: 1px solid #000;
+    position: absolute;
+        right: -1%;
+    bottom: -1%;
+    border-radius: 23px;
+    z-index: -100;
+    background-color: #1c3681;
+   
+}
+ 
+ 
+ 
+/* /* .eachService:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+  }
+ 
+.eachService h6{
+    color: #1c3681;
+    color: white;
+    text-align: center;
+}*/
+#imgContainer {
+    /* width:30%;
+    height: 30%; */
+    /* background-color: pink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 20px;
+    background-color: #1c3581;
+}
+#imgContainer img{
+    object-fit: contain;
+    color: aliceblue;
+}
+.eachService > * {
+    position: relative;
+    z-index: 1;
+  }
+  .imgContainer {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+
+  .eachService:hover #imgContainer {
+    transform: scale(1.1);
+  }
+  
+ 
+ 

@@ -1,0 +1,251 @@
+.pageContainer {
+  background: linear-gradient(135deg, #e0f2fe 0%, #fef3e8 100%);
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+}
+ 
+.heroSection {
+  position: relative;
+  background: url('../../Assets/ServicesCOver.jpg') no-repeat center center,
+    linear-gradient(135deg, rgb(28, 54, 129), #aac2f4);
+  background-size: cover;
+  padding: 270px 100px;
+  text-align: center;
+}
+ 
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(28, 54, 129, 0.4);
+  z-index: 1;
+}
+ 
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  color: white;
+  margin-top: 400px;
+  position: relative;
+  z-index: 2;
+}
+ 
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+ 
+.tabsContainer {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(28, 54, 129, 0.2);
+  margin-top: 0;
+  width: 100%;
+  z-index: 998;
+  position: sticky;
+  top: 70px;
+  transition: top 0.3s ease;
+}
+ 
+.tabsWrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+ 
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 10px 0;
+}
+ 
+.tab {
+  padding: 8px 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: rgba(28, 54, 129, 0.1);
+  color: rgb(28, 54, 129);
+  border: 1px solid rgba(28, 54, 129, 0.2);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+ 
+.tab:hover {
+  background: rgba(28, 54, 129, 0.2);
+  border-color: rgb(28, 54, 129);
+}
+ 
+.tabActive {
+  background: linear-gradient(45deg, rgb(28, 54, 129), #aac2f4);
+  color: white;
+  border-color: rgb(28, 54, 129);
+}
+ 
+.tabActive:hover {
+  background: linear-gradient(45deg, rgb(28, 54, 129), #aac2f4);
+  color: rgb(255, 255, 255);
+  border-color: rgb(28, 54, 129);
+}
+ 
+.tab:focus {
+  outline: none;
+  box-shadow: 0 0 0 0px rgba(28, 54, 129, 0.3);
+}
+ 
+.tabText {
+  position: relative;
+  z-index: 1;
+}
+ 
+.contentContainer {
+  max-width: 1280px;
+  margin: 40px auto;
+  padding: 0 20px;
+  padding-top: 20px; /* Ensure content starts below sticky tabsContainer */
+  position: relative;
+  z-index: 1;
+  min-height: 500px; /* Prevent collapse */
+}
+ 
+.contentFlex {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+}
+ 
+@media (min-width: 768px) {
+  .contentFlex {
+    flex-direction: row;
+  }
+}
+ 
+.subtabsContainer {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(28, 54, 129, 0.1);
+  position: relative;
+  z-index: 3;
+}
+ 
+@media (min-width: 768px) {
+  .subtabsContainer {
+    width: 30%;
+  }
+}
+ 
+.subtabsTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: rgb(28, 54, 129);
+  margin-bottom: 20px;
+}
+ 
+.subtabs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+ 
+.subtab {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  background: rgba(28, 54, 129, 0.05);
+  color: rgb(28, 54, 129);
+  border: 1px solid rgba(28, 54, 129, 0.1);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+ 
+.subtab:hover {
+  background: rgba(28, 54, 129, 0.15);
+  border-color: rgb(28, 54, 129);
+}
+ 
+.subtabActive {
+  background: linear-gradient(45deg, rgb(28, 54, 129), #aac2f4);
+  color: white;
+  border-color: rgb(28, 54, 129);
+  box-shadow: 0 4px 12px rgba(28, 54, 129, 0.3);
+}
+ 
+.subtab:focus {
+  outline: none;
+  box-shadow: 0 0 0 0px rgba(28, 54, 129, 0.3);
+}
+ 
+.contentArea {
+  width: 100%;
+  background: linear-gradient(100deg, rgb(28, 54, 129), #aac2f4);
+  color: white;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  position: relative;
+  min-height: 500px;
+  z-index: 3;
+  margin-top: 24px; /* Push below subtabsContainer on mobile */
+}
+ 
+@media (min-width: 768px) {
+  .contentArea {
+    width: 70%;
+    margin-top: 0; /* Side-by-side on desktop */
+  }
+}
+ 
+.contentInner {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+ 
+.contentHeading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 16px;
+}
+ 
+.contentText {
+  font-size: 1rem;
+  color: white;
+  line-height: 1.7;
+}
+ 
+.contentList {
+  list-style: none;
+  padding-left: 20px;
+  font-size: 1rem;
+  color: white;
+}
+ 
+.contentList li {
+  position: relative;
+  margin-bottom: 12px;
+}
+ 
+.contentList li::before {
+  content: '✨';
+  color: white;
+  position: absolute;
+  left: -20px;
+  font-size: 1rem;
+}
